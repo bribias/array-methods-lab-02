@@ -22,3 +22,12 @@ describe('filter array method', () => {
     expect(expected).toEqual(actual);
   });
 });
+
+describe('reduce', () => {
+  it('takes an array, callback. and initial value and returns the reduced accumulator', () => {
+    const arr = [1, 2, 3, 4];
+    const callbaack = (acc, item) => acc + item;
+    const result = reduce(arr, callback, 0);
+    expect(result).toEqual(10);
+  });
+});
