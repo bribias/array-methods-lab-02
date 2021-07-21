@@ -1,4 +1,5 @@
 import { map } from '../map-array';
+import { boopFilter } from '../filter';
 
 describe('map', () => {
   it('takes an array and modifies with a callback', () => {
@@ -19,5 +20,5 @@ describe('filter array method', () => {
     const actual = boopFilter(arr, callBackFunction);
 
     expect(expected).toEqual(actual);
-  })
-})
+  });
+});
