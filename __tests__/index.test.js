@@ -10,3 +10,14 @@ describe('map', () => {
     expect(ogArray).toEqual([1, 2, 3, 4, 5]);
   });
 });
+
+describe('filter array method', () => {
+  it('takes an array and callback and creates new array', () => {
+    const callBackFunction = item => item > 3;
+    const arr = [1, 2, 3, 4,];
+    const expected = [4];
+    const actual = boopFilter(arr, callBackFunction);
+
+    expect(expected).toEqual(actual);
+  })
+})
