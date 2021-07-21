@@ -1,11 +1,12 @@
-import map from '../map-array';
+import { map } from '../map-array';
 
 describe('map', () => {
-  it('takes an an array and modifies with a callback', () => {
-    const callback = (number) => number + 1;
-    const actual = map([2, 3, 6], callback);
-    const expected = [3, 4, 7];
+  it('takes an array and modifies with a callback', () => {
+    const ogArray = [1, 2, 3, 4, 5];
+    const callback = (item) => item * 2;
+    const result = map(ogArray, callback);
       
-    expect(actual).toEqual(expected);
+    expect(result).toEqual([2, 4, 6, 8, 10]);
+    expect(ogArray).toEqual([1, 2, 3, 4, 5]);
   });
 });
