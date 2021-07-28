@@ -1,5 +1,6 @@
 import { map } from '../map-array';
 import { boopFilter } from '../filter';
+import { reduce } from '../reduce';
 
 describe('map', () => {
   it('takes an array and modifies with a callback', () => {
@@ -26,7 +27,7 @@ describe('filter array method', () => {
 describe('reduce', () => {
   it('takes an array, callback. and initial value and returns the reduced accumulator', () => {
     const arr = [1, 2, 3, 4];
-    const callbaack = (acc, item) => acc + item;
+    const callback = (acc, item) => acc + item;
     const result = reduce(arr, callback, 0);
     expect(result).toEqual(10);
   });
