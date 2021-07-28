@@ -36,7 +36,7 @@ describe('reduce', () => {
   describe('every array method', () => {
     it('takes an array and a callback and returns true if all callbacks are true', () => {
       const callBackFunction = item => item > 5;
-      const arr = [1, 3, 5, 7];
+      const arr = [1, '', 3, '', 5, '', 7];
       const actual = everyArr(arr, callBackFunction);
 
       expect(actual).toEqual(false);
