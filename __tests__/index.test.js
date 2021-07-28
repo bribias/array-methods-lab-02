@@ -1,6 +1,7 @@
 import { map } from '../map-array';
 import { boopFilter } from '../filter';
 import { reduce } from '../reduce';
+import { everyArr } from '../every-array';
 
 describe('map', () => {
   it('takes an array and modifies with a callback', () => {
@@ -30,5 +31,15 @@ describe('reduce', () => {
     const callback = (acc, item) => acc + item;
     const result = reduce(arr, callback, 0);
     expect(result).toEqual(10);
+  });
+
+  describe('every array method', () => {
+    it('takes an array and a callback and returns true if all callbacks are true', () => {
+      const callBackFunction = item => item > 5;
+      const arr = [1, 3, 5, 7];
+      const actual = everyArr(arr, callBackFunction);
+
+      expect(actual).toEqual(false);
+    });
   });
 });
